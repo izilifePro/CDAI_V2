@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+    </h:head>
+     <h:body>
+         <h:form>
+             <br></br>
+            <h:dataTable var="p" value="#{annonceController.findAll()}" border="1" cellpadding="4" cellspacing="4">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{p.idannonce}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Restaurateur</f:facet>
+                <h:outputText value="#{p.restaurateur}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Restaurant</f:facet>
+                <h:outputText value="#{p.restaurant}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Plage disponible</f:facet>
+                <h:outputText value="#{p.plagedispo}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Nombre de Place disponible</f:facet>
+                <h:outputText value="#{p.nbreplacedispo}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Date</f:facet>
+                <h:outputText value="#{p.datededispo}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Reduction</f:facet>
+                <h:outputText value="#{p.reduction}"></h:outputText>
+            </h:column>
+             <h:column>
+                <f:facet name="header">% Reduction</f:facet>
+                <h:outputText value="#{p.pourcreduction}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Option</f:facet>
+                <h:commandLink value="Valider Annonce"></h:commandLink>
+             </h:column>
+        </h:dataTable>
+         </h:form>
+    </h:body>
+</html>
